@@ -68,6 +68,8 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 
 ## 2. PackagedDirectives
 
+### ! The directives doesnt mean the DomainModels of the Apps and Packages.
+
 ```shell
 .
 ├── .changeset/
@@ -76,7 +78,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 ├── .storybook/
 ├── .vscode/
 ├── .yarn/
-├── apps
+├── apps/
 │   ├── api-client/
 │   │   ├── dist/
 │   │   ├── main.ts
@@ -98,13 +100,13 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 │       ├── next.config.ts
 │       ├── package.json
 │       └── tsconfig.json
-├── docs
-│   ├── exsamples
-│   ├── references
-│   ├── sdks
-│   ├── services
-│   ├── specs
-│   └── tutorials
+├── docs/
+│   ├── exsamples/
+│   ├── references/
+│   ├── sdks/
+│   ├── services/
+│   ├── specs/
+│   └── tutorials/
 ├── packages/
 │   ├── styles/
 │   ├── tests/
@@ -112,29 +114,29 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 │   │   ├── playwright/
 │   │   ├── vitest/
 │   │   └── package.json
-│   ├── typescript-config
+│   ├── typescript-config/
 │   │   ├── base.json
 │   │   ├── nextjs.json
 │   │   ├── package.json
 │   │   └── react-liblary.json
-│   └── ui
+│   └── ui/
 │       ├── node_modules/
 │       ├── components/
 │       ├── package.json
 │       └── tsconfig.json
-├── node_modules
-│   └── @repo
-│       ├── lego-api-client
-│       ├── lego-web
-│       ├── lego-assets
-│       ├── lego-cli
-│       ├── lego-constants
-│       ├── lego-scheme-editor
-│       ├── lego-storybook-server
-│       ├── lego-tests
-│       ├── lego-typescript-config
-│       ├── lego-ooui # submodules
-│       └── lego-clstg-* # submodules
+├── node_modules/
+│   └── @repo/
+│       ├── lego-api-client/
+│       ├── lego-web/
+│       ├── lego-assets/
+│       ├── lego-cli/
+│       ├── lego-constants/
+│       ├── lego-scheme-editor/
+│       ├── lego-storybook-server/
+│       ├── lego-tests/
+│       ├── lego-typescript-config/
+│       ├── lego-ooui/ # submodules
+│       └── lego-clstg-*/ # submodules
 ├── app.clstg.yaml
 ├── app.dev.yaml
 ├── app.storybook.yaml
