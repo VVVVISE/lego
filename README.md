@@ -118,10 +118,10 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 │   │   ├── package.json
 │   │   └── react-liblary.json
 │   └── ui
-│   │   ├── node_modules/
-│   │   ├── components/
-│   │   ├── package.json
-│   │   └── tsconfig.json
+│       ├── node_modules/
+│       ├── components/
+│       ├── package.json
+│       └── tsconfig.json
 ├── node_modules
 │   └── @repo
 │       ├── lego-api-client
