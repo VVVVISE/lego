@@ -68,7 +68,60 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 
 ## 2. PackagedDirectives
 
-```sh
+```shell
+.
+├── .changeset/
+├── .github/
+├── .husky/
+├── .storybook/
+├── .vscode/
+├── .yarn/
+├── apps
+│   ├── api-client/
+│   │   ├── dist/
+│   │   ├── main.ts
+│   │   ├── codegen.ts
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   ├── prisma-app/
+│   │   ├── prisma/
+│   │   │   └── scheme.prisma
+│   │   ├── dotenv.clstg
+│   │   ├── dotenv.dev
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   └── web/
+│       ├── node_modules/
+│       ├── public/
+│       ├── dotenv.clstg
+│       ├── dotenv.dev
+│       ├── next.config.ts
+│       ├── package.json
+│       └── tsconfig.json
+├── docs
+│   ├── exsamples
+│   ├── references
+│   ├── sdks
+│   ├── services
+│   ├── specs
+│   └── tutorials
+├── packages/
+│   ├── styles/
+│   ├── tests/
+│   │   ├── node_modules/
+│   │   ├── playwright/
+│   │   ├── vitest/
+│   │   └── package.json
+│   ├── typescript-config
+│   │   ├── base.json
+│   │   ├── nextjs.json
+│   │   ├── package.json
+│   │   └── react-liblary.json
+│   └── ui
+│   │   ├── node_modules/
+│   │   ├── components/
+│   │   ├── package.json
+│   │   └── tsconfig.json
 ├── node_modules
 │   └── @repo
 │       ├── lego-api-client
@@ -82,6 +135,15 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 │       ├── lego-typescript-config
 │       ├── lego-ooui # submodules
 │       └── lego-clstg-* # submodules
+├── app.clstg.yaml
+├── app.dev.yaml
+├── app.storybook.yaml
+├── LISENCE
+├── Makefile
+├── package.json
+├── README.md
+├── turbo.json
+└── yarn.lock
 ```
 
 ## 3. License
