@@ -1,0 +1,25 @@
+<script>
+	/*
+		NOTE:useRuntimeConfigをmock
+	 */
+  const useRuntimeConfig = () => {
+    return {
+      isDevelopment: true
+    }
+  }
+  const definePageMeta = () => {
+    return {
+      isDevelopment: true
+    }
+  }
+  const useRoute = () => {
+    return {
+      meta: {
+        layout: 'empty'
+      }
+    }
+  }
+  const useRouter = () => {
+    return []
+  }
+</script>
