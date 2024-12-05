@@ -35,6 +35,7 @@
   "private": true,
   "scripts": {
     "api-client": "yarn workspace @repo/lego-api-client",
+    "ui": "yarn workspace @repo/lego-ui",
     "build": "turbo build",
     "dev": "turbo dev",
     "format": "turbo lint -- --fix",
