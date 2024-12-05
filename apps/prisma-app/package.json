@@ -4,10 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prisma:init": "prisma init --datasource-provider sqlite"
+    "prisma:init": "prisma init --datasource-provider sqlite",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
   },
   "private": true,
   "devDependencies": {
+    "@prisma/client": "^6.0.1",
     "@types/node": "^22.10.1",
     "prisma": "^6.0.1",
     "ts-node": "^10.9.2",

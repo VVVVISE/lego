@@ -22,11 +22,13 @@ doppler:
 setup:
 	@doppler setup
 	@cd apps/web && doppler secrets download --no-file --format env > .env
-	@yarn web prisma generate
+	@cd apps/prisma-app && cp dotenv.dev .env
+	@yarn prisma-app prisma generate
 	@echo '💬 [APP] Finished Workspaces Setups ✨'
 
 env:
 	@cd apps/web && doppler secrets download --no-file --format env > .env
+	@cd apps/prisma-app && cp dotenv.dev .env
 	@echo '💬 [APP] Generated Environments ✨'
 
 # --
@@ -37,11 +39,11 @@ init-prisma:
 	@echo '💬 [PRISMA] Generated apps/prisma-app⚡️'
 
 generate:
-	@yarn prisma-app prisma generate
+	@yarn prisma-app prisma:generate
 	@echo '💬 [PRISMA] Generated apps/prisma-app⚡️'
 
 migrate:
-	@yarn prisma-app prisma migrate dev
+	@yarn prisma-app prisma:migrate
 	@echo '💬 [PRISMA] Migrated apps/prisma-app⚡️'
 
 ## this short hand
@@ -59,7 +61,7 @@ dev:
 # ---------
 
 envthis:
-	@head -n 1 ./.env
+	@head -n 1 ./apps/web/.env
 
 envs:
-	@cat ./.env
+	@cat ./apps/web/.env
