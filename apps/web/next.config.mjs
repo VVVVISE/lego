@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-export default nextConfig = {
+const nextConfig = {
   transpilePackages: ["@repo/lego-ui"],
+  experimental: {
+    appDir: true,
+  }
 };
+
+export default nextConfig;
