@@ -37,11 +37,12 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 
 ### DB:
 
-- Prisma (ORM)
-- SQLite (node@22.7.0 native-API)
-  - ClientSide
-- [appwrite/Databases(https://appwrite.io/docs/products/databases)
-  - ServerSide
+- ORM
+  - [Prisma](https://github.com/prisma/prisma)
+- ClientSide
+  - [SQLite (node@22.7.0 native-API)](https://nodejs.org/docs/latest/api/sqlite.html)
+- ServerSide
+  - [appwrite/Databases](https://appwrite.io/docs/products/databases)
 
 ### Schemes:
 
