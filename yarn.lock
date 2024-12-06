@@ -4717,6 +4717,7 @@ __metadata:
     "@sentry/cli": ^2.39.1
     "@types/babel__core": ^7.1.14
     babel-preset-fbjs: ^7.26.0
+    minimist: ^3.0.5
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
