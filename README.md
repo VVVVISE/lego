@@ -19,7 +19,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 
 - Environments-Handler
   - [Doppler](https://www.doppler.com/)
-- Hosting
+- Hosting Recommnendations
   - Asia-Pacific recommended (considering the weak JPYen)
     - [DigitalOcean](https://www.digitalocean.com/)
     - [SakuraInternet-Cloud](https://cloud.sakura.ad.jp/)
