@@ -6,16 +6,14 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 
 ## NOW UNDER WIP - alpha or less:
 
-## 1. Tech
-
-### CoreMiddleWares:
+## CoreMiddleWares:
 
 - [Turborepo (inclued Nextjs, React)](https://turbo.build/repo/docs)
 - [nodejs@23.3.0: API Documentation](https://nodejs.org/docs/latest/api/)
 - [Berry (yarn@4.4.1)](https://github.com/yarnpkg/berry)
   - I like PNPM, but it wears on me at times.
 
-### Cloud:
+## Cloud:
 
 - Environments-Handler
   - [Doppler](https://www.doppler.com/)
@@ -35,7 +33,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 - ClientLogService
   - [Sentry](https://sentry.io/)
 
-### DB:
+## DB:
 
 - ORM
   - [Prisma](https://github.com/prisma/prisma)
@@ -44,7 +42,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 - ServerSide
   - [appwrite/Databases](https://appwrite.io/docs/products/databases)
 
-### Schemes:
+## Schemes:
 
 - GraphQL
   - ClientSide:
@@ -52,7 +50,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
   - ServerSide:
     - Generated from appwrite with appwrite/Databases
 
-### Apps:
+## Apps:
 
 1. [lego-api-client](https://github.com/VVVVISE/lego/tree/main/apps/api-client)
     - ApiClients generates **Interfaces**, **Modules**, **Functions**, and **Hooks** from **GraphQL**.
@@ -70,7 +68,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 3. [lego-scheme-editor](https://github.com/VVVVISE/lego/tree/main/apps/prisma-app)
     - The package will be able to manipulate Prisma's DB schema from the GUI, but currently it is simply Prisma.
 
-### Serverless:
+## Serverless:
 
 1. lego-clstg-edge: _submodules_
 2. lego-clstg-cli: _submodules_
@@ -78,7 +76,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 4. lego-clstg-sockets: _submodules_
 5. lego-clstg-db: _submodules_
 
-### Packages:
+## Packages:
 
 1. lego-cli
 2. lego-assets
@@ -97,7 +95,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
           - Not for public
             - We have plans for a _**Payed Subscription Service**_ in the near future.
 
-## 2. PackagedDirectives
+## WorkspacesDirective
 
 ```shell
 .
@@ -177,6 +175,6 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 └── yarn.lock
 ```
 
-## 3. License
+## License
 
 GPL-3.0 license
