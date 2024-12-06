@@ -57,10 +57,16 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 1. [lego-api-client](https://github.com/VVVVISE/lego/tree/main/apps/api-client)
     - ApiClients generates **Interfaces**, **Modules**, **Functions**, and **Hooks** from **GraphQL**.
 2. [lego-web](https://github.com/VVVVISE/lego/tree/main/apps/web)
-    - Web application itself
-    - Components
-      - [lego-components-free](https://github.com/VVVVISE/lego-components-free): WIP
-      - **OOUI (lego-components-pro)**: Not for public
+    - Client application itself
+    - Components Suites
+      - [lego-ui](https://github.com/VVVVISE/lego/tree/main/packages/ui):
+        - Basic Package
+      - **[OOUI](https://github.com/VVVVISE/ooui)**:
+        - Payed Subscription Package
+          - _**Object-Oriented Fully UI Suites** - that fully abstract the components of browser applications_
+          - _The beta version is currently in the development stage_
+          - Not for public
+            - We have plans for a _**Payed Subscription Service**_ in the near future.
 3. [lego-scheme-editor](https://github.com/VVVVISE/lego/tree/main/apps/prisma-app)
     - The package will be able to manipulate Prisma's DB schema from the GUI, but currently it is simply Prisma.
 
