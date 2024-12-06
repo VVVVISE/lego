@@ -30,7 +30,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
     - GCP
     - Azure
 - Serverless-Middleware
-  - [AppWrite](https://github.com/appwrite/appwrite)
+  - [appwrite](https://github.com/appwrite/appwrite)
   - ([SupaBase](https://github.com/supabase/supabase) is also under consideration)
 - ClientLogService
   - [Sentry](https://sentry.io/)
@@ -40,12 +40,16 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 - Prisma (ORM)
 - SQLite (node@22.7.0 native-API)
   - ClientSide
-- MySQL, MongoDB
-  - ClstgSide
+- [appwrite/Databases(https://appwrite.io/docs/products/databases)
+  - ServerSide
 
 ### Schemes:
 
 - GraphQL
+  - ClientSide:
+    - Generated from Prisma with SQLite
+  - ServerSide:
+    - Generated from appwrite with appwrite/Databases
 
 ### Apps:
 
