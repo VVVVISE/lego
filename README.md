@@ -70,7 +70,7 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 3. [lego-scheme-editor](https://github.com/VVVVISE/lego/tree/main/apps/prisma-app)
     - The package will be able to manipulate Prisma's DB schema from the GUI, but currently it is simply Prisma.
 
-#### clstg-apps:
+### Serverless:
 
 1. lego-clstg-edge: _submodules_
 2. lego-clstg-cli: _submodules_
