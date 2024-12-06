@@ -82,12 +82,14 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 6. [lego-typescript-config](https://github.com/VVVVISE/lego/tree/main/packages/typescript-config)
 7. [lego-typescript-config](https://github.com/VVVVISE/lego/tree/main/packages/tests)
 8. lego-ui
-      - [lego-ui](https://github.com/VVVVISE/lego-ui): Basic Packages
-      - **[OOUI](https://github.com/VVVVISE/ooui)**: (lego-ui-pro)
-        - _**Object-Oriented Fully UI Suites** - that fully abstract the components of browser applications_
-        - _The beta version is currently in the development stage_
-        - Not for public
-          - We have plans for a _**Payed Subscription Service**_ in the near future.
+      - [lego-ui](https://github.com/VVVVISE/lego-ui):
+        - Basic Package
+      - **[OOUI](https://github.com/VVVVISE/ooui)**:
+        - Payed Subscription Package
+          - _**Object-Oriented Fully UI Suites** - that fully abstract the components of browser applications_
+          - _The beta version is currently in the development stage_
+          - Not for public
+            - We have plans for a _**Payed Subscription Service**_ in the near future.
 
 ## 2. PackagedDirectives
 
