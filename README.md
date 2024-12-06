@@ -4,25 +4,45 @@ This design paradigm leverages Next.js, Prisma, and GraphQL to automate model an
 
 This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/legojs).
 
-## Status
-### NOW UNDER WIP - alpha or less. 
+### NOW UNDER WIP - alpha or less
+
+---
+
+## CoreMiddlewares:
+
+- Turborepo
+  - [vercel/turborepo](https://github.com/vercel/turborepo)
+  - [Documentation](https://turbo.build/repo/docs)
+  - Made by Vercel
+  - Inclued Nextjs
+- Node.js v3.3.0
+  - [API Documentation](https://nodejs.org/docs/latest/api/)
+- Yarn v4.4.1
+  - [yarnpkg/berry](https://github.com/yarnpkg/berry)
+ 
+---
 
 ## TABLE of CONTENTS
 
-- [SetUp](https://github.com/VVVVISE/lego?tab=readme-ov-file#SetUp)
-- [CoreMiddleWares](https://github.com/VVVVISE/lego?tab=readme-ov-file#coremiddlewares)
-- [Cloud](https://github.com/VVVVISE/lego?tab=readme-ov-file#Cloud)
-- [DB](https://github.com/VVVVISE/lego?tab=readme-ov-file#DB)
-- [Schemes](https://github.com/VVVVISE/lego?tab=readme-ov-file#Schemes)
-- [Apps](https://github.com/VVVVISE/lego?tab=readme-ov-file#Apps)
-- [Serverless](https://github.com/VVVVISE/lego?tab=readme-ov-file#Serverless)
-- [Packages](https://github.com/VVVVISE/lego?tab=readme-ov-file#Packages)
-- [Serverless](https://github.com/VVVVISE/lego?tab=readme-ov-file#Serverless)
-- [WorkspacesDirective](https://github.com/VVVVISE/lego?tab=readme-ov-file#WorkspacesDirective)
+- [Usages](#Usages)
 
-## SetUp
+* [Clouds](#Clouds)
+* [DB](#DB)
+* [Schemes](#Schemes)
 
-### FIRST TIME INSTALL
+- [Apps](#Apps)
+- [Packages](#Packages)
+
+* [WorkspacesDirective](#WorkspacesDirective)
+
+- [Author](#Author)
+- [Licence](#Licence)
+
+---
+
+## Usages:
+
+### First time Instration
 
 ```sh
 # Install Doppler-CLI
@@ -32,6 +52,7 @@ $ bash
 $ make doppler-apt
 
 ## MacOS
+$ bash
 $ make doppler-mac
 
 # Create Development-Workspace
@@ -57,20 +78,14 @@ $ yarn build
 $ yarn web dev
 ```
 
-## 1. Tech
+---
 
-### CoreMiddleWares:
+## Clouds:
 
-- [Turborepo (inclued Nextjs, React)](https://turbo.build/repo/docs)
-- [nodejs@23.3.0: API Documentation](https://nodejs.org/docs/latest/api/)
-- [Berry (yarn@4.4.1)](https://github.com/yarnpkg/berry)
-  - I like PNPM, but it wears on me at times.
-
-### Cloud:
-
-- Environments-Handler
+### Environments-Handler
   - [Doppler](https://www.doppler.com/)
-- Hosting
+
+### Hosting Recommnendations
   - Asia-Pacific recommended (considering the weak JPYen)
     - [DigitalOcean](https://www.digitalocean.com/)
     - [SakuraInternet-Cloud](https://cloud.sakura.ad.jp/)
@@ -80,58 +95,81 @@ $ yarn web dev
     - AWS
     - GCP
     - Azure
-- Serverless-Middleware
-  - [AppWrite](https://github.com/appwrite/appwrite)
-  - ([SupaBase](https://github.com/supabase/supabase) is also under consideration)
-- ClientLogService
+
+### Serverless-Middleware
+  - [appwrite](https://github.com/appwrite/appwrite)
+    - SubmoduleRepo: _WIP_
+  - [SupaBase](https://github.com/supabase/supabase) is also under consideration
+
+### ClientLogService
   - [Sentry](https://sentry.io/)
 
-### DB:
+## DB:
 
-- Prisma (ORM)
-- SQLite (node@22.7.0 native-API)
-  - ClientSide
-- MySQL, MongoDB
-  - ClstgSide
+- ORM
+  - [Prisma](https://github.com/prisma/prisma)
+- ClientSide
+  - [SQLite (node@22.7.0 native-API)](https://nodejs.org/docs/latest/api/sqlite.html)
+- ServerSide
+  - [appwrite/Databases](https://appwrite.io/docs/products/databases)
 
-### Schemes:
+## Schemes:
 
 - GraphQL
+  - Generated from Prisma
+    - Generate Models for Client
+    - Generate Models for EdgeFront
+    - Generate Models for ServerlessAPI
+   
+---
 
-### Apps:
+## Apps:
 
-1. lego-api-clients
+1. [lego-api-client](https://github.com/VVVVISE/lego/tree/main/apps/api-client)
     - ApiClients generates **Interfaces**, **Modules**, **Functions**, and **Hooks** from **GraphQL**.
-2. lego-web
-    - Web application itself
-    - Components
-      - [lego-components-free](https://github.com/VVVVISE/lego-components-free): WIP
-      - **OOUI (lego-components-pro)**: Not for public
-3. lego-scheme-editor
+2. lego-edge
+    - _WIP_
+    - PartialHydration with ServerComponent
+    - Sockets to ServerlessAPI
+3. [lego-web](https://github.com/VVVVISE/lego/tree/main/apps/web)
+    - Client application itself
+    - Components Suites
+      - [lego-ui](https://github.com/VVVVISE/lego/tree/main/packages/ui):
+        - Basic Package
+      - **[OOUI](https://github.com/VVVVISE/ooui)**:
+        - Payed Subscription Package
+          - _**Object-Oriented Fully UI Suites** - that fully abstract the components of browser applications_
+          - _The beta version is currently in the development stage_
+          - Not for public
+            - We have plans for a _**Payed Subscription Service**_ in the near future.
+4. [lego-scheme-editor](https://github.com/VVVVISE/lego/tree/main/apps/prisma-app)
     - The package will be able to manipulate Prisma's DB schema from the GUI, but currently it is simply Prisma.
 
-#### clstg-apps:
-
-1. lego-clstg-edge: _submodules_
-2. lego-clstg-cli: _submodules_
-3. lego-clstg-api: _submodules_
-4. lego-clstg-sockets: _submodules_
-5. lego-clstg-db: _submodules_
-
-### Packages:
+## Packages:
 
 1. lego-cli
 2. lego-assets
 3. lego-constants
 4. lego-figma-sync-server
 5. lego-storybook-server
-6. lego-type-script-config
-7. lego-tests
-8. lego-components
-      - [lego-components-free](https://github.com/VVVVISE/lego-components-free): _WIP_
-      - **OOUI (lego-components-pro)**: Not for public
+6. [lego-typescript-config](https://github.com/VVVVISE/lego/tree/main/packages/typescript-config)
+7. [lego-tests](https://github.com/VVVVISE/lego/tree/main/packages/tests)
+    - unit-test
+    - component-test
+    - e2e-test
+8. lego-ui
+      - [lego-ui](https://github.com/VVVVISE/lego-ui):
+        - Basic Package
+      - **[OOUI](https://github.com/VVVVISE/ooui)**:
+        - Payed Subscription Package
+          - _**Object-Oriented Fully UI Suites** - that fully abstract the components of browser applications_
+          - _The beta version is currently in the development stage_
+          - Not for public
+            - We have plans for a _**Payed Subscription Service**_ in the near future.
 
-## 2. PackagedDirectives
+---
+
+## WorkspacesDirective
 
 ```shell
 .
@@ -211,6 +249,11 @@ $ yarn web dev
 └── yarn.lock
 ```
 
-## 3. License
+---
+
+## Author:
+VVVVISE / **Susumu Fujii**: _Usually known as suji(i)_
+
+## License:
 
 GPL-3.0 license
