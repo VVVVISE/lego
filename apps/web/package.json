@@ -11,7 +11,7 @@
   "dependencies": {
     "@repo/lego-typescript-config": "workspace:*",
     "@repo/lego-ui": "workspace:*",
-    "@sentry/nextjs": "^8.42.0",
+    "@sentry/nextjs": "^8.28.0",
     "next": "14.2.20",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
