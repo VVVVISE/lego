@@ -85,9 +85,9 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 5. lego-storybook-server
 6. [lego-typescript-config](https://github.com/VVVVISE/lego/tree/main/packages/typescript-config)
 7. [lego-tests](https://github.com/VVVVISE/lego/tree/main/packages/tests)
-  - unit-test
-  - component-test
-  - e2e-test
+    - unit-test
+    - component-test
+    - e2e-test
 8. lego-ui
       - [lego-ui](https://github.com/VVVVISE/lego-ui):
         - Basic Package
