@@ -31,13 +31,13 @@
     "@sentry/cli": "^2.39.1",
     "@types/babel__core": "^7.1.14",
     "babel-preset-fbjs": "^7.26.0",
+    "minimist": "^0.2.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "private": true,
   "scripts": {
     "api-client": "yarn workspace @repo/lego-api-client",
-    "ui": "yarn workspace @repo/lego-ui",
     "build": "turbo build",
     "dev": "turbo dev",
     "format": "turbo lint -- --fix",
@@ -45,6 +45,7 @@
     "prepare": "husky install",
     "prisma-app": "yarn workspace @repo/lego-prisma-app",
     "pritty": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "ui": "yarn workspace @repo/lego-ui",
     "web": "yarn workspace @repo/lego-web"
   },
   "workspaces": [
