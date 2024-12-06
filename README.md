@@ -54,14 +54,14 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 
 ### Apps:
 
-1. lego-api-clients
+1. [lego-api-client](https://github.com/VVVVISE/lego/tree/main/apps/api-client)
     - ApiClients generates **Interfaces**, **Modules**, **Functions**, and **Hooks** from **GraphQL**.
-2. lego-web
+2. [lego-web](https://github.com/VVVVISE/lego/tree/main/apps/web)
     - Web application itself
     - Components
       - [lego-components-free](https://github.com/VVVVISE/lego-components-free): WIP
       - **OOUI (lego-components-pro)**: Not for public
-3. lego-scheme-editor
+3. [lego-scheme-editor](https://github.com/VVVVISE/lego/tree/main/apps/prisma-app)
     - The package will be able to manipulate Prisma's DB schema from the GUI, but currently it is simply Prisma.
 
 #### clstg-apps:
@@ -79,11 +79,15 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 3. lego-constants
 4. lego-figma-sync-server
 5. lego-storybook-server
-6. lego-type-script-config
-7. lego-tests
-8. lego-components
-      - [lego-components-free](https://github.com/VVVVISE/lego-components-free): _WIP_
-      - **OOUI (lego-components-pro)**: Not for public
+6. [lego-typescript-config](https://github.com/VVVVISE/lego/tree/main/packages/typescript-config)
+7. [lego-typescript-config](https://github.com/VVVVISE/lego/tree/main/packages/tests)
+8. lego-ui
+      - [lego-ui](https://github.com/VVVVISE/lego-ui): Basic Packages
+      - **[OOUI](https://github.com/VVVVISE/ooui)**: (lego-ui-pro)
+        - _**Object-Oriented Fully UI Suites** - that fully abstract the components of browser applications_
+        - _The beta version is currently in the development stage_
+        - Not for public
+          - We have plans for a _**Payed Subscription Service**_ in the near future.
 
 ## 2. PackagedDirectives
 
