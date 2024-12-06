@@ -17,9 +17,23 @@ This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/le
 
 ### Cloud:
 
-- [Doppler](https://www.doppler.com/)
-- [AppWrite](https://github.com/appwrite/appwrite) (or Maybe [SupaBase](https://github.com/supabase/supabase))
-- Sentry
+- Environments-Handler
+  - [Doppler](https://www.doppler.com/)
+- Hosting
+  - Asia-Pacific recommended (considering the weak JPYen)
+    - [DigitalOcean](https://www.digitalocean.com/)
+    - [SakuraInternet-Cloud](https://cloud.sakura.ad.jp/)
+    - [SakuraInternet-VPS](https://vps.sakura.ad.jp/)
+  - The following is also possible, of course
+    - Vercel
+    - AWS
+    - GCP
+    - Azure
+- Serverless-Middleware
+  - [AppWrite](https://github.com/appwrite/appwrite)
+  - ([SupaBase](https://github.com/supabase/supabase) is also under consideration)
+- ClientLogService
+  - [Sentry](https://sentry.io/)
 
 ### DB:
 
