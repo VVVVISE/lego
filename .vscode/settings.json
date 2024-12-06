@@ -1,22 +1,31 @@
 {
   "css.validate": false,
   "stylelint.enable": true,
-  "files.exclude": {
-    "out": false
+  "files": {
+    "associations": {
+      "*.ts": "typescript"
+    },
+    "exclude": {
+      "out": false
+    },
+    "trimTrailingWhitespace": true,
+    "trimFinalNewlines": true,
   },
   "search.exclude": {
     "out": true,
     "server": true
   },
-  "files.trimTrailingWhitespace": true,
-  "editor.insertSpaces": false,
-  "editor.tabSize": 2,
+  "editor": {
+    "insertSpaces": false,
+    "tabSize": 2,
+    "defaultFormatter": "esbenp.prettier-vscode",
+    "formatOnSave": false,
+    "codeActionsOnSave": {
+      "source.fixAll.eslint": "never"
+    },
+  },
   "eslint.validate": ["javascript", "typescript"],
   "prettier.enable": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "never"
-  },
-  "editor.formatOnSave": false,
   "git.autofetch": true,
   "i18n-ally.localesPaths": []
 }

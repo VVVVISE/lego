@@ -1,17 +1,20 @@
+checkout:
+	@git checkout package.json
+	@git checkout yarn.lock
+
 # --
 # 1. INSTALL
 # ---------
 
 berry:
 	@corepack enable
-	@yarn init -2
+	@yarn init -2 -w
 	@yarn set version stable
-	@git checkout package.json
+	@make checkout
 	@echo '💬 [APP] Initialized yarn@berry ✨'
 
 init:
-	@yarn unlink && yarn link
-	@yarn install
+	@yarn unlink && yarn link && yarn
 	@echo '💬 [APP] Workpaces Initialized ✨'
 
 doppler:
