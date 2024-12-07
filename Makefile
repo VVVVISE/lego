@@ -17,7 +17,18 @@ init:
 	@yarn unlink && yarn link && yarn
 	@echo '💬 [APP] Workpaces Initialized ✨'
 
-doppler:
+ # Debian 11+ / Ubuntu 22.04+
+doppler-apt:
+	@sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
+	@curl -sLf --retry 3 --tlsv1.2 --proto "=https" 'https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key' | sudo gpg --dearmor -o /usr/share/keyrings/doppler-archive-keyring.gpg
+	@echo "deb [signed-by=/usr/share/keyrings/doppler-archive-keyring.gpg] https://packages.doppler.com/public/cli/deb/debian any-version main" | sudo tee /etc/apt/sources.list.d/doppler-cli.list
+	@sudo apt-get update && sudo apt-get install doppler
+	@alias doppler="/usr/bin/doppker"
+	@doppler login
+	@echo '💬 [APP] Installed DopplerCLI ✨'
+
+# Mac
+doppler-mac:
 	@brew install dopplerhq/cli/doppler
 	@doppker login
 	@echo '💬 [APP] Installed DopplerCLI ✨'
@@ -33,6 +44,13 @@ env:
 	@cd apps/web && doppler secrets download --no-file --format env > .env
 	@cd apps/prisma-app && cp dotenv.dev .env
 	@echo '💬 [APP] Generated Environments ✨'
+
+## this short hand
+workspace:
+	@make berry
+	@make init
+	@make setup
+	@make env
 
 # --
 # 2. BUILD
@@ -55,9 +73,10 @@ prisma:
 	@yarn prisma-app prisma studio
 	@echo '💬 [PRISMA] generated apps/prisma-app⚡️'
 
-dev:
-	@yarn web dev
-	@echo '💬 [APP] Booted up apps/web ⚡️'
+# First time commands Seaquense
+create:
+	@make workspace
+	@make prisma
 
 # --
 # shell shorthands

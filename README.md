@@ -4,7 +4,58 @@ This design paradigm leverages Next.js, Prisma, and GraphQL to automate model an
 
 This Product is **ProtoTypes** of [VVVVISE/LEGOJS](https://github.com/VVVVISE/legojs).
 
-## NOW UNDER WIP - alpha or less:
+## Status
+### NOW UNDER WIP - alpha or less. 
+
+## TABLE of CONTENTS
+
+- [SetUp](https://github.com/VVVVISE/lego?tab=readme-ov-file#SetUp)
+- [CoreMiddleWares](https://github.com/VVVVISE/lego?tab=readme-ov-file#coremiddlewares)
+- [Cloud](https://github.com/VVVVISE/lego?tab=readme-ov-file#Cloud)
+- [DB](https://github.com/VVVVISE/lego?tab=readme-ov-file#DB)
+- [Schemes](https://github.com/VVVVISE/lego?tab=readme-ov-file#Schemes)
+- [Apps](https://github.com/VVVVISE/lego?tab=readme-ov-file#Apps)
+- [Serverless](https://github.com/VVVVISE/lego?tab=readme-ov-file#Serverless)
+- [Packages](https://github.com/VVVVISE/lego?tab=readme-ov-file#Packages)
+- [Serverless](https://github.com/VVVVISE/lego?tab=readme-ov-file#Serverless)
+- [WorkspacesDirective](https://github.com/VVVVISE/lego?tab=readme-ov-file#WorkspacesDirective)
+
+## SetUp
+
+### FIRST TIME INSTALL
+
+```sh
+# Install Doppler-CLI
+
+## Debian 11+ / Ubuntu 22.04+
+$ bash
+$ make doppler-apt
+
+## MacOS
+$ make doppler-mac
+
+# Create Development-Workspace
+$ make create
+```
+
+### Boot whole packages dev-server
+
+```sh
+$ yarn dev
+
+## Ref: if only boot `@repo/web` dev-server 
+$ yarn web dev
+
+```
+
+### Build whole packages
+
+```sh
+$ yarn build
+
+## Ref: if only build `@repo/web` package
+$ yarn web dev
+```
 
 ## CoreMiddleWares:
 
