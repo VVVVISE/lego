@@ -158,7 +158,7 @@ $ yarn web dev
     - component-test
     - e2e-test
 8. lego-ui
-      - [lego-ui](https://github.com/VVVVISE/lego-ui):
+      - [lego-ui](https://github.com/VVVVISE/lego/tree/main/packages/ui):
         - Basic Package
       - **[OOUI](https://github.com/VVVVISE/ooui)**:
         - Payed Subscription Package
