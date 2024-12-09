@@ -9,3 +9,40 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+}
+
+model personalBasics {
+  id    Int     @id @default(autoincrement())
+  name  String
+  profile String
+  urls  String
+}
+
+model expertise {
+  id    Int     @id @default(autoincrement())
+  coreExpertise  String
+  otherExpertise String
+  attributes String
+}
+
+model career {
+  id    Int     @id @default(autoincrement())
+  education String
+  works String
+}
+
+model projects {
+  id    Int     @id @default(autoincrement())
+  title String
+  URL  String?
+  position String
+  endDate String
+  startDate String
+  productName String?
+  summary String?
+}

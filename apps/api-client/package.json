@@ -4,10 +4,14 @@
   "private": true,
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.3",
+    "@prisma/client": "^6.0.1",
     "@types/node": "^22.10.1",
     "@types/punycode": "^2.1.4",
+    "graphql-fields": "^2.0.3",
+    "graphql-scalars": "^1.24.0",
     "punycode": "^2.3.1",
-    "tsc": "^2.0.4"
+    "tsc": "^2.0.4",
+    "typegraphql-prisma": "^0.28.0"
   },
   "dependencies": {
     "graphql": "16.9.0",
