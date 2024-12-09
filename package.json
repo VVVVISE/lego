@@ -1,6 +1,7 @@
 {
   "name": "@vvvvise/lego",
-  "version": "0.1.1",
+  "description": "This paradigm streamlines development with schema-driven monorepo setups, generating GraphQL-based models, interfaces, and APIs. It integrates design, style, and development for efficiency, secure communication, and enhanced error management.",
+  "version": "alpha-1.0.0",
   "dependencies": {
     "@repo/lego-api-client": "workspace:*",
     "@repo/lego-prisma-app": "workspace:*",
@@ -51,5 +52,6 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "author": "Susumu Fujii <powermac.g7@gmail.com>"
 }
