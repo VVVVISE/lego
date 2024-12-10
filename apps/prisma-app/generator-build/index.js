@@ -6221,7 +6221,7 @@ const ${lowerCase(ctx.mapping.model)} = await ${ctx.method}({
     body: (ctx) => {
       const onlySelect = ctx.firstScalar ? `
 // Create many ${ctx.plural} and only return the \`${ctx.firstScalar.name}\`
-const ${lowerCase(ctx.mapping.model)}With${capitalize(ctx.firstScalar.name)}Only = await ${ctx.method}({
+const ${lowerCase(ctx.mapping.model)}With${capitalize(ctx.firstScalar.name)}Only = await ${ctx.method}({ 
   select: { ${ctx.firstScalar.name}: true },
   data: [
     // ... provide data here
@@ -6259,7 +6259,7 @@ const ${lowerCase(ctx.mapping.model)} = await ${ctx.method}({
     }
   },
   findUniqueOrThrow: {
-    body: (ctx) => `Find one ${ctx.singular} that matches the filter or throw an error with \`error.code='P2025'\`
+    body: (ctx) => `Find one ${ctx.singular} that matches the filter or throw an error with \`error.code='P2025'\` 
 if no matches were found.
 @param {${getModelArgName(ctx.model.name, ctx.action)}} args - Arguments to find a ${ctx.singular}
 @example
@@ -6506,7 +6506,7 @@ const ${lowerCase(ctx.mapping.model)} = await ${ctx.method}({
 @param {${getModelArgName(ctx.model.name, ctx.action)}} args - Select which filters you would like to apply.
 @example
 const ${lowerCase(ctx.mapping.model)} = await ${ctx.method}({
-  filter: { age: { $gt: 25 } }
+  filter: { age: { $gt: 25 } } 
 })`,
     fields: {
       filter: () => "The query predicate filter. If unspecified, then all documents in the collection will match the predicate. ${@link https://docs.mongodb.com/manual/reference/operator/query MongoDB Docs}.",
@@ -6639,7 +6639,7 @@ var ModelFieldRefs = class {
 
 /**
  * Fields of the ${name} model
- */
+ */ 
 interface ${getFieldRefsTypeName(name)} {
 ${this.stringifyFields()}
 }
@@ -7137,7 +7137,7 @@ var ModelDelegate = class {
       excludedArgsForCount.push("relationLoadStrategy");
     }
     const excludedArgsForCountType = excludedArgsForCount.map((name2) => `'${name2}'`).join(" | ");
-    return `${availableActions.includes(DMMF.ModelAction.aggregate) ? `type ${countArgsName}<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    return `${availableActions.includes(DMMF.ModelAction.aggregate) ? `type ${countArgsName}<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
   Omit<${getModelArgName(name, DMMF.ModelAction.findMany)}, ${excludedArgsForCountType}> & {
     select?: ${getCountAggregateInputName(name)} | true
   }
@@ -7686,7 +7686,7 @@ if (!fs.existsSync(path.join(__dirname, 'schema.prisma'))) {
     ${JSON.stringify(pathToPosix(relativeOutdir))},
     ${JSON.stringify(pathToPosix(relativeOutdir).split("/").slice(1).join("/"))},
   ]
-
+  
   const alternativePath = alternativePaths.find((altPath) => {
     return fs.existsSync(path.join(process.cwd(), altPath, 'schema.prisma'))
   }) ?? alternativePaths[0]
@@ -7748,7 +7748,7 @@ function buildQueryEngineWasmModule(wasm, copyEngine, runtimeNameJs) {
       getQueryEngineWasmModule: async () => {
         const queryEngineWasmFilePath = require('path').join(config.dirname, 'query_engine_bg.wasm')
         const queryEngineWasmFileBytes = require('fs').readFileSync(queryEngineWasmFilePath)
-
+      
         return new WebAssembly.Module(queryEngineWasmFileBytes)
       }
     }`;
@@ -7759,7 +7759,7 @@ function buildQueryEngineWasmModule(wasm, copyEngine, runtimeNameJs) {
   getQueryEngineWasmModule: async () => {
     const loader = (await import('#wasm-engine-loader')).default
     const engine = (await loader).default
-    return engine
+    return engine 
   }
 }`;
   }
@@ -8030,7 +8030,7 @@ export import Decimal = runtime.Decimal
 export type DecimalJsLike = runtime.DecimalJsLike
 
 /**
- * Metrics
+ * Metrics 
  */
 export type Metrics = runtime.Metrics
 export type Metric<T> = runtime.Metric<T>
@@ -8055,7 +8055,7 @@ export type PrismaVersion = {
   client: string
 }
 
-export const prismaVersion: PrismaVersion
+export const prismaVersion: PrismaVersion 
 
 /**
  * Utility Types
@@ -8071,7 +8071,7 @@ export import InputJsonValue = runtime.InputJsonValue
 
 /**
  * Types of the values used to represent different kinds of \`null\` values when working with JSON fields.
- *
+ * 
  * @see https://www.prisma.io/docs/concepts/components/prisma-client/working-with-fields/working-with-json-fields#filtering-on-a-json-field
  */
 namespace NullTypes {
@@ -8084,21 +8084,21 @@ ${buildNullClass("AnyNull")}
 
 /**
  * Helper for filtering JSON entries that have \`null\` on the database (empty on the db)
- *
+ * 
  * @see https://www.prisma.io/docs/concepts/components/prisma-client/working-with-fields/working-with-json-fields#filtering-on-a-json-field
  */
 export const DbNull: NullTypes.DbNull
 
 /**
  * Helper for filtering JSON entries that have JSON \`null\` values (not empty on the db)
- *
+ * 
  * @see https://www.prisma.io/docs/concepts/components/prisma-client/working-with-fields/working-with-json-fields#filtering-on-a-json-field
  */
 export const JsonNull: NullTypes.JsonNull
 
 /**
  * Helper for filtering JSON entries that are \`Prisma.DbNull\` or \`Prisma.JsonNull\`
- *
+ * 
  * @see https://www.prisma.io/docs/concepts/components/prisma-client/working-with-fields/working-with-json-fields#filtering-on-a-json-field
  */
 export const AnyNull: NullTypes.AnyNull
@@ -8403,9 +8403,9 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 function buildNullClass(name) {
   const source = `/**
 * Type of \`Prisma.${name}\`.
-*
+* 
 * You cannot use other instances of this class. Please use the \`Prisma.${name}\` value.
-*
+* 
 * @see https://www.prisma.io/docs/concepts/components/prisma-client/working-with-fields/working-with-json-fields#filtering-on-a-json-field
 */
 class ${name} {
@@ -8726,7 +8726,7 @@ function queryRawDefinition(context) {
    * \`\`\`
    * const result = await prisma.$queryRaw\`SELECT * FROM User WHERE id = \${1} OR email = \${'user@email.com'};\`
    * \`\`\`
-   *
+   * 
    * Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client/raw-database-access).
    */
   $queryRaw<T = unknown>(query: TemplateStringsArray | Prisma.Sql, ...values: any[]): Prisma.PrismaPromise<T>;
@@ -8738,7 +8738,7 @@ function queryRawDefinition(context) {
    * \`\`\`
    * const result = await prisma.$queryRawUnsafe('SELECT * FROM User WHERE id = $1 OR email = $2;', 1, 'user@email.com')
    * \`\`\`
-   *
+   * 
    * Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client/raw-database-access).
    */
   $queryRawUnsafe<T = unknown>(query: string, ...values: any[]): Prisma.PrismaPromise<T>;`;
@@ -8754,7 +8754,7 @@ function executeRawDefinition(context) {
    * \`\`\`
    * const result = await prisma.$executeRaw\`UPDATE User SET cool = \${true} WHERE email = \${'user@email.com'};\`
    * \`\`\`
-   *
+   * 
    * Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client/raw-database-access).
    */
   $executeRaw<T = unknown>(query: TemplateStringsArray | Prisma.Sql, ...values: any[]): Prisma.PrismaPromise<number>;
@@ -8766,7 +8766,7 @@ function executeRawDefinition(context) {
    * \`\`\`
    * const result = await prisma.$executeRawUnsafe('UPDATE User SET cool = $1 WHERE email = $2 ;', true, 'user@email.com')
    * \`\`\`
-   *
+   * 
    * Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client/raw-database-access).
    */
   $executeRawUnsafe<T = unknown>(query: string, ...values: any[]): Prisma.PrismaPromise<number>;`;
@@ -8804,7 +8804,7 @@ function metricDefinition(context) {
   const property2 = property("$metrics", namedType(`runtime.${runtimeImport("MetricsClient")}`)).setDocComment(
     docComment`
         Gives access to the client metrics in json or prometheus format.
-
+        
         @example
         \`\`\`
         const metrics = await prisma.$metrics.json()
@@ -8829,7 +8829,7 @@ function runCommandRawDefinition(context) {
         explain: false,
       })
       \`\`\`
-
+   
       Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client/raw-database-access).
     `);
   return stringify(method2, { indentLevel: 1, newLine: "leading" });
@@ -8871,7 +8871,7 @@ var PrismaClientClass = class {
     }
     return `/**
  * ##  Prisma Client \u02B2\u02E2
- *
+ * 
  * Type-safe database client for TypeScript & Node.js
  * @example
  * \`\`\`
@@ -8880,7 +8880,7 @@ var PrismaClientClass = class {
  * const ${lowerCase(example.plural)} = await prisma.${lowerCase(example.model)}.findMany()
  * \`\`\`
  *
- *
+ * 
  * Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client).
  */`;
   }
@@ -9053,7 +9053,7 @@ export type TransactionClient = Omit<Prisma.DefaultPrismaClient, runtime.ITXClie
              \`\`\`
              // Defaults to stdout
              log: ['query', 'info', 'warn', 'error']
-
+            
              // Emit as events
              log: [
                { emit: 'stdout', level: 'query' },
@@ -9286,7 +9286,7 @@ ${modelAndTypes.map((model) => model.toTS()).join("\n")}
 ${prismaEnums?.join("\n\n")}
 ${fieldRefs.length > 0 ? `
 /**
- * Field references
+ * Field references 
  */
 
 ${fieldRefs.join("\n\n")}` : ""}
@@ -9300,7 +9300,7 @@ ${this.dmmf.inputObjectTypes.prisma?.reduce((acc, inputType) => {
           const innerName = needsGeneric ? `${inputType.name}Base<$PrismaModel>` : `${inputType.name}Base`;
           const typeName = needsGeneric ? `${inputType.name}<$PrismaModel = never>` : inputType.name;
           const baseName = `Required<${innerName}>`;
-          acc.push(`export type ${typeName} =
+          acc.push(`export type ${typeName} = 
   | PatchUndefined<
       Either<${baseName}, Exclude<keyof ${baseName}, 'path'>>,
       ${baseName}
@@ -9370,7 +9370,7 @@ class PrismaClient {
         } else {
           message = 'PrismaClient is unable to run in this browser environment, or has been bundled for the browser (running in \`' + runtime.prettyName + '\`).'
         }
-
+        
         message += \`
 If this is unexpected, please open an issue: https://pris.ly/prisma-prisma-bug-report\`
 
