@@ -1,27 +1,33 @@
 {
   "name": "@repo/lego-prisma-app",
   "version": "1.0.0",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prisma:init": "prisma init --datasource-provider sqlite",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:studio": "prisma studio"
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-graphql": "^0.12.0",
+    "reflect-metadata": "^0.2.2",
+    "type-graphql": "^2.0.0-rc.2"
   },
-  "private": true,
   "devDependencies": {
     "@prisma/client": "^6.0.1",
     "@types/express": "^4",
     "@types/node": "^22.10.1",
+    "fixpack": "^4.0.0",
     "prisma": "^6.0.1",
     "ts-node": "^10.9.2",
     "tsc": "^2.0.4",
     "typescript": "^5.7.2"
   },
-  "type": "module",
-  "dependencies": {
-    "express": "^4.21.2",
-    "express-graphql": "^0.12.0"
-  }
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "build": "yarn prisma:generate",
+    "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
+    "prisma:init": "prisma init --datasource-provider sqlite",
+    "prisma:lint": "prisma format --schema=./prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:push": "prisma db push --schema=./prisma/schema.prisma",
+    "prisma:studio": "prisma studio",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module"
 }

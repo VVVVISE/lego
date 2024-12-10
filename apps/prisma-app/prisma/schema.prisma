@@ -11,38 +11,63 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id      Int         @id @default(autoincrement())
+  email   String      @unique
+  name    String
+  profile String?
+  urls    String?
+  Individual Individual?
 }
 
-model personalBasics {
-  id    Int     @id @default(autoincrement())
-  name  String
-  profile String
-  urls  String
+model ExpertiseTag {
+  id              Int             @id @default(autoincrement())
+  expertise       String
+  expertiseLists  ExpertiseList[] @relation("ExpertiseTagToList")
 }
 
-model expertise {
-  id    Int     @id @default(autoincrement())
-  coreExpertise  String
-  otherExpertise String
-  attributes String
+model ExpertiseList {
+  id           Int            @id @default(autoincrement())
+  tags         ExpertiseTag[] @relation("ExpertiseTagToList")
+  individual   Individual     @relation(fields: [individualId], references: [id])
+  individualId Int            @unique
 }
 
-model career {
-  id    Int     @id @default(autoincrement())
-  education String
-  works String
+model EducationInfo {
+  id           Int      @id @default(autoincrement())
+  schoolName   String
+  undergraduate String
+  startDate    DateTime
+  endDate      DateTime?
+  summary      String?
+  career       Career    @relation(fields: [careerId], references: [id])
+  careerId     Int
 }
 
-model projects {
-  id    Int     @id @default(autoincrement())
-  title String
-  URL  String?
-  position String
-  endDate String
-  startDate String
+model ProjectInfo {
+  id          Int       @id @default(autoincrement())
+  title       String
+  url         String?
+  position    String
+  startDate   DateTime
+  endDate     DateTime?
   productName String?
-  summary String?
+  summary     String?
+  career      Career    @relation(fields: [careerId], references: [id])
+  careerId    Int
+}
+
+model Career {
+  id               Int             @id @default(autoincrement())
+  educationInfo    EducationInfo[]
+  projectInfo      ProjectInfo[]
+  individual       Individual      @relation(fields: [individualId], references: [id])
+  individualId     Int            @unique
+}
+
+model Individual {
+  id            Int           @id @default(autoincrement())
+  user          User          @relation(fields: [userId], references: [id])
+  userId        Int           @unique
+  expertiseList ExpertiseList?
+  career        Career?
 }
