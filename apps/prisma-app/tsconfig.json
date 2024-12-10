@@ -1,5 +1,5 @@
 {
-  "extends": "../../packages/typescript-config/base.json",
+  "extends": "../../packages/typescript-config/nextjs.json",
   "exclude": ["node_modules"],
   "compilerOptions": {
     "paths": {
@@ -7,6 +7,13 @@
     }
   },
   "include": [
-    "app/*.ts"
+    "src/*.ts"
+  ],
+  "files": [
+    "src/main.ts"
+  ],
+  "references": [
+    // { "path": "./tsconfig.app.json" },
+    // { "path": "./tsconfig.node.json" }
   ]
 }
