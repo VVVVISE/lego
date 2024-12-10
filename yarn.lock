@@ -1585,7 +1585,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-yoga/subscription@npm:^5.0.1":
+"@graphql-yoga/subscription@npm:^5.0.0, @graphql-yoga/subscription@npm:^5.0.1":
   version: 5.0.1
   resolution: "@graphql-yoga/subscription@npm:5.0.1"
   dependencies:
@@ -3714,9 +3714,12 @@ __metadata:
     "@types/node": "npm:^22.10.1"
     express: "npm:^4.21.2"
     express-graphql: "npm:^0.12.0"
+    fixpack: "npm:^4.0.0"
     prisma: "npm:^6.0.1"
+    reflect-metadata: "npm:^0.2.2"
     ts-node: "npm:^10.9.2"
     tsc: "npm:^2.0.4"
+    type-graphql: "npm:^2.0.0-rc.2"
     typescript: "npm:^5.7.2"
   languageName: unknown
   linkType: soft
@@ -4705,7 +4708,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/semver@npm:^7.1.0":
+"@types/semver@npm:^7.1.0, @types/semver@npm:^7.5.6":
   version: 7.5.8
   resolution: "@types/semver@npm:7.5.8"
   checksum: 10c0/8663ff927234d1c5fcc04b33062cb2b9fcfbe0f5f351ed26c4d1e1581657deebd506b41ff7fdf89e787e3d33ce05854bc01686379b89e9c49b564c4cfa988efa
@@ -8358,6 +8361,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphql-query-complexity@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "graphql-query-complexity@npm:0.12.0"
+  dependencies:
+    lodash.get: "npm:^4.4.2"
+  peerDependencies:
+    graphql: ^14.6.0 || ^15.0.0 || ^16.0.0
+  checksum: 10c0/4ab22f7df6a250b6ef5aaf10115cb9bbbc0491790961e1be054d14dbaf621fb88a0293b0b42a265ce81e9ccf00e4d26f3dda82e6be6678961b5c2ef1cf62724d
+  languageName: node
+  linkType: hard
+
 "graphql-request@npm:7.1.2":
   version: 7.1.2
   resolution: "graphql-request@npm:7.1.2"
@@ -9509,6 +9523,13 @@ __metadata:
   dependencies:
     p-locate: "npm:^5.0.0"
   checksum: 10c0/d3972ab70dfe58ce620e64265f90162d247e87159b6126b01314dd67be43d50e96a50b517bce2d9452a79409c7614054c277b5232377de50416564a77ac7aad3
+  languageName: node
+  linkType: hard
+
+"lodash.get@npm:^4.4.2":
+  version: 4.4.2
+  resolution: "lodash.get@npm:4.4.2"
+  checksum: 10c0/48f40d471a1654397ed41685495acb31498d5ed696185ac8973daef424a749ca0c7871bf7b665d5c14f5cc479394479e0307e781f61d5573831769593411be6e
   languageName: node
   linkType: hard
 
@@ -11246,6 +11267,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"reflect-metadata@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "reflect-metadata@npm:0.2.2"
+  checksum: 10c0/1cd93a15ea291e420204955544637c264c216e7aac527470e393d54b4bb075f10a17e60d8168ec96600c7e0b9fcc0cb0bb6e91c3fbf5b0d8c9056f04e6ac1ec2
+  languageName: node
+  linkType: hard
+
 "reflect.getprototypeof@npm:^1.0.4, reflect.getprototypeof@npm:^1.0.6":
   version: 1.0.7
   resolution: "reflect.getprototypeof@npm:1.0.7"
@@ -11665,7 +11693,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.1.2, semver@npm:^7.3.5, semver@npm:^7.5.2, semver@npm:^7.6.0, semver@npm:^7.6.3":
+"semver@npm:^7.1.2, semver@npm:^7.3.5, semver@npm:^7.5.2, semver@npm:^7.5.4, semver@npm:^7.6.0, semver@npm:^7.6.3":
   version: 7.6.3
   resolution: "semver@npm:7.6.3"
   bin:
@@ -12542,7 +12570,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.5.0, tslib@npm:^2.5.2, tslib@npm:^2.6.3, tslib@npm:^2.8.1":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.5.0, tslib@npm:^2.5.2, tslib@npm:^2.6.2, tslib@npm:^2.6.3, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
@@ -12668,6 +12696,27 @@ __metadata:
   version: 0.7.1
   resolution: "type-fest@npm:0.7.1"
   checksum: 10c0/ce6b5ef806a76bf08d0daa78d65e61f24d9a0380bd1f1df36ffb61f84d14a0985c3a921923cf4b97831278cb6fa9bf1b89c751df09407e0510b14e8c081e4e0f
+  languageName: node
+  linkType: hard
+
+"type-graphql@npm:^2.0.0-rc.2":
+  version: 2.0.0-rc.2
+  resolution: "type-graphql@npm:2.0.0-rc.2"
+  dependencies:
+    "@graphql-yoga/subscription": "npm:^5.0.0"
+    "@types/node": "npm:*"
+    "@types/semver": "npm:^7.5.6"
+    graphql-query-complexity: "npm:^0.12.0"
+    semver: "npm:^7.5.4"
+    tslib: "npm:^2.6.2"
+  peerDependencies:
+    class-validator: ">=0.14.0"
+    graphql: ^16.8.1
+    graphql-scalars: ^1.23.0
+  peerDependenciesMeta:
+    class-validator:
+      optional: true
+  checksum: 10c0/28225999318e57216e9fbaca32a07a025479e8b97bcc47bdf4263162097fa0bc6e8bc92b00f09eaea1dd03e600fe4eb54a6c2c225e5db4b8254c9ee2fca66144
   languageName: node
   linkType: hard
 

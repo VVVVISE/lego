@@ -4,6 +4,9 @@
   "compilerOptions": {
     "paths": {
       "@repo/*": ["./*"]
-    }                               /* Skip type checking all .d.ts files. */
-  }
+    }
+  },
+  "include": [
+    "app/*.ts"
+  ]
 }
