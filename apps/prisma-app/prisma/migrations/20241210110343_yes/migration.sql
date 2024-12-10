@@ -1,32 +1,11 @@
-/*
-  Warnings:
-
-  - You are about to drop the `career` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `expertise` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `personalBasics` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `projects` table. If the table is not empty, all the data it contains will be lost.
-  - Made the column `name` on table `User` required. This step will fail if there are existing NULL values in that column.
-
-*/
--- DropTable
-PRAGMA foreign_keys=off;
-DROP TABLE "career";
-PRAGMA foreign_keys=on;
-
--- DropTable
-PRAGMA foreign_keys=off;
-DROP TABLE "expertise";
-PRAGMA foreign_keys=on;
-
--- DropTable
-PRAGMA foreign_keys=off;
-DROP TABLE "personalBasics";
-PRAGMA foreign_keys=on;
-
--- DropTable
-PRAGMA foreign_keys=off;
-DROP TABLE "projects";
-PRAGMA foreign_keys=on;
+-- CreateTable
+CREATE TABLE "User" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "email" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "profile" TEXT,
+    "urls" TEXT
+);
 
 -- CreateTable
 CREATE TABLE "ExpertiseTag" (
@@ -44,18 +23,21 @@ CREATE TABLE "ExpertiseList" (
 -- CreateTable
 CREATE TABLE "EducationInfo" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "userId" INTEGER NOT NULL,
     "schoolName" TEXT NOT NULL,
     "undergraduate" TEXT NOT NULL,
     "startDate" DATETIME NOT NULL,
     "endDate" DATETIME,
     "summary" TEXT,
     "careerId" INTEGER NOT NULL,
+    CONSTRAINT "EducationInfo_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "EducationInfo_careerId_fkey" FOREIGN KEY ("careerId") REFERENCES "Career" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable
 CREATE TABLE "ProjectInfo" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "userId" INTEGER NOT NULL,
     "title" TEXT NOT NULL,
     "url" TEXT,
     "position" TEXT NOT NULL,
@@ -64,13 +46,16 @@ CREATE TABLE "ProjectInfo" (
     "productName" TEXT,
     "summary" TEXT,
     "careerId" INTEGER NOT NULL,
+    CONSTRAINT "ProjectInfo_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "ProjectInfo_careerId_fkey" FOREIGN KEY ("careerId") REFERENCES "Career" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable
 CREATE TABLE "Career" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "userId" INTEGER NOT NULL,
     "individualId" INTEGER NOT NULL,
+    CONSTRAINT "Career_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "Career_individualId_fkey" FOREIGN KEY ("individualId") REFERENCES "Individual" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
@@ -89,25 +74,17 @@ CREATE TABLE "_ExpertiseTagToList" (
     CONSTRAINT "_ExpertiseTagToList_B_fkey" FOREIGN KEY ("B") REFERENCES "ExpertiseTag" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
--- RedefineTables
-PRAGMA defer_foreign_keys=ON;
-PRAGMA foreign_keys=OFF;
-CREATE TABLE "new_User" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "email" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
-    "profile" TEXT,
-    "urls" TEXT
-);
-INSERT INTO "new_User" ("email", "id", "name") SELECT "email", "id", "name" FROM "User";
-DROP TABLE "User";
-ALTER TABLE "new_User" RENAME TO "User";
+-- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
-PRAGMA foreign_keys=ON;
-PRAGMA defer_foreign_keys=OFF;
 
 -- CreateIndex
 CREATE UNIQUE INDEX "ExpertiseList_individualId_key" ON "ExpertiseList"("individualId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "EducationInfo_userId_key" ON "EducationInfo"("userId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Career_userId_key" ON "Career"("userId");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Career_individualId_key" ON "Career"("individualId");

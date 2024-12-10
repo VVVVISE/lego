@@ -11,18 +11,21 @@ datasource db {
 }
 
 model User {
-  id      Int         @id @default(autoincrement())
-  email   String      @unique
-  name    String
-  profile String?
-  urls    String?
-  Individual Individual?
+  id            Int            @id @default(autoincrement())
+  email         String         @unique
+  name          String
+  profile       String?
+  urls          String?
+  career        Career?        @relation("UserToCareer")
+  individual    Individual?    @relation("UserToIndividual")
+  educationInfo EducationInfo?
+  projectInfo   ProjectInfo[]  @relation("UserToProjectInfo")
 }
 
 model ExpertiseTag {
-  id              Int             @id @default(autoincrement())
-  expertise       String
-  expertiseLists  ExpertiseList[] @relation("ExpertiseTagToList")
+  id        Int            @id @default(autoincrement())
+  expertise String
+  lists     ExpertiseList[] @relation("ExpertiseTagToList")
 }
 
 model ExpertiseList {
@@ -33,18 +36,22 @@ model ExpertiseList {
 }
 
 model EducationInfo {
-  id           Int      @id @default(autoincrement())
-  schoolName   String
+  id            Int       @id @default(autoincrement())
+  user          User      @relation(fields: [userId], references: [id])
+  userId        Int       @unique
+  schoolName    String
   undergraduate String
-  startDate    DateTime
-  endDate      DateTime?
-  summary      String?
-  career       Career    @relation(fields: [careerId], references: [id])
-  careerId     Int
+  startDate     DateTime
+  endDate       DateTime?
+  summary       String?
+  career        Career    @relation(fields: [careerId], references: [id])
+  careerId      Int
 }
 
 model ProjectInfo {
   id          Int       @id @default(autoincrement())
+  user        User      @relation("UserToProjectInfo", fields: [userId], references: [id])
+  userId      Int
   title       String
   url         String?
   position    String
@@ -57,16 +64,18 @@ model ProjectInfo {
 }
 
 model Career {
-  id               Int             @id @default(autoincrement())
-  educationInfo    EducationInfo[]
-  projectInfo      ProjectInfo[]
-  individual       Individual      @relation(fields: [individualId], references: [id])
-  individualId     Int            @unique
+  id            Int             @id @default(autoincrement())
+  user          User            @relation("UserToCareer", fields: [userId], references: [id])
+  userId        Int             @unique
+  educationInfo EducationInfo[]
+  projectInfo   ProjectInfo[]
+  individual    Individual      @relation(fields: [individualId], references: [id])
+  individualId  Int             @unique
 }
 
 model Individual {
   id            Int           @id @default(autoincrement())
-  user          User          @relation(fields: [userId], references: [id])
+  user          User          @relation("UserToIndividual", fields: [userId], references: [id])
   userId        Int           @unique
   expertiseList ExpertiseList?
   career        Career?
