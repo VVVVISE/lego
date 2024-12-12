@@ -10,11 +10,11 @@ This Product is **ProtoTypes** of **[INVARCH](https://github.com/VVVVISE/invarch
 
 ## CoreMiddlewares:
 
-- [vercel/turborepo](https://github.com/vercel/turborepo)
+#### [vercel/turborepo](https://github.com/vercel/turborepo)
   - [Documentation](https://turbo.build/repo/docs)
-- [nodejs/node](https://github.com/nodejs/node) > v22.11.0
+#### [nodejs/node > v22.11.0](https://github.com/nodejs/node)
   - [API Documentation](https://nodejs.org/docs/latest/api/)
-- [yarnpkg/berry](https://github.com/yarnpkg/berry)
+#### [yarnpkg/berry](https://github.com/yarnpkg/berry)
   - [Documentation](https://yarnpkg.com/getting-started)
   - [CLI](https://yarnpkg.com/cli)
   - [API](https://yarnpkg.com/api)
