@@ -6,14 +6,10 @@
       "@repo/*": ["./*"]
     }
   },
-  "include": [
-    "src/*.ts"
-  ],
-  "files": [
-    "src/main.ts"
-  ],
-  "references": [
-    // { "path": "./tsconfig.app.json" },
-    // { "path": "./tsconfig.node.json" }
-  ]
+  "include": ["prisma/**/*.ts", "src/**/*.ts"],
+  "files": ["prisma/generated/**/*.ts", "src/**/*.ts"],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }

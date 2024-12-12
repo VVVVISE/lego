@@ -22,7 +22,10 @@ node_modules
 .yarn/install-stage.gz
 
 # turbo generated files
-.turbo
+.turbo/cache/*
+.turbo/cookies/*
+.turbo/daemon/*
 
 # dists
-!apps/api-client/dist
+apps/api-client/dist
+apps/prisma-app/prisma/generated
