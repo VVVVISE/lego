@@ -3,6 +3,7 @@
   "description": "This paradigm streamlines development with schema-driven monorepo setups, generating GraphQL-based models, interfaces, and APIs. It integrates design, style, and development for efficiency, secure communication, and enhanced error management.",
   "version": "alpha-1.0.0",
   "author": "Susumu Fujii <powermac.g7@gmail.com>",
+  "private": true,
   "dependencies": {
     "@repo/lego-api-client": "workspace:*",
     "@repo/lego-prisma-app": "workspace:*",
@@ -13,10 +14,14 @@
   "devDependencies": {
     "@ardatan/relay-compiler": "^12.0.0",
     "@babel/core": "^7.26.0",
+    "@types/node": "^22.10.2",
     "@yarnpkg/sdks": "^3.2.0",
     "fixpack": "^4.0.0",
     "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4",
     "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
     "vscode": "^1.1.37"
   },
   "engines": {
@@ -35,7 +40,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "private": true,
   "scripts": {
     "api-client": "yarn workspace @repo/lego-api-client",
     "build": "turbo build",

@@ -5,8 +5,8 @@
   "devDependencies": {
     "typescript": "^5.7.2"
   },
+  "lisence": "GPL-3.0 license",
   "publishConfig": {
     "access": "public"
-  },
-  "lisence": "GPL-3.0 license"
+  }
 }

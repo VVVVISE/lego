@@ -2,27 +2,25 @@
   "name": "@repo/lego-api-client",
   "version": "0.0.0",
   "private": true,
-  "devDependencies": {
-    "@graphql-codegen/cli": "5.0.3",
-    "@prisma/client": "^6.0.1",
-    "@types/node": "^22.10.1",
-    "@types/punycode": "^2.1.4",
-    "graphql-fields": "^2.0.3",
-    "graphql-scalars": "^1.24.0",
-    "punycode": "^2.3.1",
-    "tsc": "^2.0.4",
-    "typegraphql-prisma": "^0.28.0"
-  },
   "dependencies": {
     "graphql": "16.9.0",
     "graphql-request": "7.1.2",
     "graphql-yoga": "5.10.4"
   },
-  "scripts": {
-    "build": "graphql-codegen --config codegen.ts",
-    "web": "yarn workspace web",
-    "api-client": "yarn workspace api-client"
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.3",
+    "@prisma/client": "^6.0.1",
+    "@types/punycode": "^2.1.4",
+    "graphql-fields": "^2.0.3",
+    "graphql-scalars": "^1.24.0",
+    "punycode": "^2.3.1",
+    "typegraphql-prisma": "^0.28.0"
   },
-  "type": "module",
-  "lisence": "GPL-3.0 license"
+  "lisence": "GPL-3.0 license",
+  "scripts": {
+    "api-client": "yarn workspace api-client",
+    "build": "graphql-codegen --config codegen.ts",
+    "web": "yarn workspace web"
+  },
+  "type": "module"
 }

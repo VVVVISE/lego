@@ -2,8 +2,8 @@
   "name": "@repo/lego-typescript-config",
   "version": "0.0.0",
   "private": true,
+  "lisence": "GPL-3.0 license",
   "publishConfig": {
     "access": "public"
-  },
-  "lisence": "GPL-3.0 license"
+  }
 }

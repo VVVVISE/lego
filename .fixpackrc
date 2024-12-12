@@ -1,0 +1,55 @@
+{
+  "sortToTop": [
+    "name",
+    "description",
+    "version",
+    "author",
+    "private"
+  ],
+  "required": [
+    "name",
+    "version"
+  ],
+  "warn": [
+    "description",
+    "author",
+    "repository",
+    "keywords",
+    "main",
+    "bugs",
+    "homepage",
+    "license"
+  ],
+  "requiredOnPrivate": [
+    "name",
+    "version"
+  ],
+  "warnOnPrivate": [
+    "description",
+    "main"
+  ],
+  "sortedSubItems": [
+    "dependencies",
+    "devDependencies",
+    "peerDependencies",
+    "optionalDependencies",
+    "scripts",
+    "keywords",
+    "jshintConfig"
+  ],
+  "quiet": false,
+  "files": [
+    "package.json",
+    "apps/api-client/package.json",
+		"apps/prisma-app/package.json",
+		"apps/web/package.json",
+		"packages/tests/package.json",
+		"packages/typescript-config/package.json",
+		"packages/ui/package.json"
+  ],
+  "dryRun": false,
+  "wipe": false,
+  "indent": 2,
+  "newLine": "LF",
+  "finalNewLine": true
+}
