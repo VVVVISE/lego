@@ -1,13 +1,18 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
 generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+generator typegraphql {
+  provider = "typegraphql-prisma"
+  output   = "../prisma/generated/type-graphql"
 }
 
 model User {
@@ -20,6 +25,18 @@ model User {
   individual    Individual?    @relation("UserToIndividual")
   educationInfo EducationInfo?
   projectInfo   ProjectInfo[]  @relation("UserToProjectInfo")
+  posts Post[]
+}
+
+model Post {
+  id        Int   @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  published Boolean
+  title     String
+  content   String?
+  author    User?    @relation(fields: [authorId], references: [id])
+  authorId  Int?
 }
 
 model ExpertiseTag {
