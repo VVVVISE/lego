@@ -37,10 +37,8 @@ This Product is **ProtoTypes** of **[INVARCH](https://github.com/VVVVISE/invarch
 - [Apps](#Apps)
 - [Packages](#Packages)
 
-* [WorkspacesDirective](#WorkspacesDirective)
-
-- [Author](#Author)
-- [Licence](#Licence)
+* [Author](#Author)
+* [Licence](#Licence)
 
 ---
 
@@ -184,47 +182,6 @@ Now Under consideration (for)
           - _The beta version is currently in the development stage_
           - Not for public
             - We have plans for a _**Payed Subscription Service**_ in the near future.
-
----
-
-## WorkspacesDirective
-
-```shell
-.
-├── apps
-│   ├── api-client/
-│   ├── prisma-app/
-│   └── web/
-├── docs
-│   ├── exsamples
-│   ├── references
-│   ├── sdks
-│   ├── services
-│   ├── specs
-│   └── tutorials
-├── packages/
-│   ├── styles/
-│   ├── tests/
-│   ├── typescript-config
-│   └── ui
-├── node_modules
-│   └── @repo
-│       ├── lego-api-client
-│       ├── lego-web
-│       ├── lego-assets
-│       ├── lego-cli
-│       ├── lego-constants
-│       ├── lego-scheme-editor
-│       ├── lego-storybook-server
-│       ├── lego-tests
-│       ├── lego-typescript-config
-│       ├── lego-ooui # submodules
-│       └── lego-clstg-* # submodules
-├── Makefile
-├── package.json
-├── README.md
-└── yarn.lock
-```
 
 ---
 
