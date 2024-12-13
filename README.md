@@ -1,3 +1,12 @@
+## [♻️ The repository has been migrated to the new project name “INVVARCH” 👉](https://github.com/vvvvise/invvarch)
+
+_The repository has been relocated to:_<br />
+**_[♻️ https://github.com/vvvvise/invvarch 👉](https://github.com/vvvvise/invvarch)_**
+
+This repository will remain archived for reference. We appreciate your understanding and continued support as we move forward under our new name.
+
+---
+
 # lego
 
 This design paradigm leverages Next.js, Prisma, and GraphQL to automate model and interface generation while centralizing communication between clients and the edge. It simplifies software development, ensures unified error management across packages, reduces development time, and optimizes resource usage for efficient and streamlined operations.
