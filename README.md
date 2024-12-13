@@ -24,7 +24,7 @@ This Product is **ProtoTypes** of **[INVARCH](https://github.com/VVVVISE/invarch
 ## TABLE of CONTENTS
 
 * [Technical-Design](https://github.com/vvvvise/invarch/wiki/Technical-Design) 📎
-* [EffortEstimation](https://github.com/vvvvise/invarch/wiki/EffortEstimation)
+* [EffortEstimation](https://github.com/vvvvise/invarch/wiki/EffortEstimation) 📎
 
 - [Usages](#Usages)
 
